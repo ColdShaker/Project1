@@ -1,9 +1,9 @@
 # Getting started with Project 1
 
-Clone the cpsc349-project1 repository locally:
+To clone the project locally:
 
 ```shell-session
-git clone https://github.com/ProfAvery/cpsc349-project1.git
+git clone https://github.com/ColdShaker/Project1.git
 ```
 
 Install and start the [Eleventy static site generator][1]:

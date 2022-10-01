@@ -1,32 +1,28 @@
 ---
-site: CPSC 349 - Fall 2022 - Project 1
+layout: base
+title: Home
 ---
+<header>
+    <h1>{{ title }} </h1>
+</header>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="stylesheet" href="mvp.css">
-    <title>{{ site }}</title>
-</head>
-<body>
-    <header>
-        <h1>Photos Collection</h1>
-        <nav>
-            <!--Linking it later-->
-            <a href="">About</a>
-        </nav>
-    </header>
-    <main>
-        <!--Collection of Photos should be here-->
-        
-    </main>
-    <footer>
-        <hr>
-        <p>
-            <small>
-                <a href="https://www.pexels.com">Photos provided by Pexels</a>
-            </small>
-        </p>
-    </footer>
-</body>
-</html>
+<nav>
+    <!--Linking it later-->
+    <a href="">About</a>
+</nav>
+
+<h1>Photos Collection</h1>
+<ul>
+    {% for photo in _data -%}
+    <li>{{ photo }}</li>
+    {% endfor -%}
+</ul>
+
+<footer>
+    <hr>
+    <p>
+        <small>
+            <a href="https://www.pexels.com">Photos provided by Pexels</a>
+        </small>
+    </p>
+</footer>

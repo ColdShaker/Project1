@@ -1,23 +1,27 @@
 ---
 layout: base
 title: Home
+pagination:
+    data: photos.0apgfsq.media
+    size: 80
+    alias: photos
 ---
 <header>
-    <h1>{{ title }} </h1>
+    <h1>{{ title }}</h1>
+    <nav>
+        <!--Linking it later-->
+        <a href="">About</a>
+    </nav>
 </header>
-
-<nav>
-    <!--Linking it later-->
-    <a href="">About</a>
-</nav>
-
-<h1>Photos Collection</h1>
-<ul>
-    {% for photo in _data -%}
-    <li>{{ photo }}</li>
-    {% endfor -%}
-</ul>
-
+<main>
+    <h1>Photos Collection</h1>
+    <p>A collection of music</p>
+    <ul>
+        {% for photo in photos -%}
+        <img src={{photo.src.tiny}} alt={{photo.alt}}>
+        {% endfor -%}
+    </ul>
+</main>
 <footer>
     <hr>
     <p>

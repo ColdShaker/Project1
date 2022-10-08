@@ -5,6 +5,7 @@ pagination:
     data: photos.0apgfsq.media
     size: 1
     alias: photo
+    permalink: "photos/test/{{photos.0apgfsq.media.id}}"
 ---
 <!DOCTYPE html>
 <html lang="en-US">
@@ -13,12 +14,12 @@ pagination:
     <header>
         <h1>{{ title }}</h1>
         <nav>
-            <a href="../../about/index.html">About</a>
-            <a href="../../index.html">Home</a>
-            <ul>{% if page.url != pagination.href.first %}<a href="{{ pagination.href.first }}">First Photo</a>{% else %}{% endif %}</ul>
-            <ul>{% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">Previous Photo</a>{% else %}{% endif %}</ul>
-            <ul>{% if pagination.href.next %}<a href="{{ pagination.href.next }}">Next Photo</a>{% else %}{% endif %}</ul>
-            <ul>{% if page.url != pagination.href.last %}<a href="{{ pagination.href.last }}">Last Photo</a>{% else %}{% endif %}</ul>
+            <a href="/Project1/about/index.html">About</a>
+            <a href="/Project1">Home</a>
+            <ul>{% if page.url != pagination.href.first %}<a href="/Project1{{ pagination.href.first }}">First Photo</a>{% else %}{% endif %}</ul>
+            <ul>{% if pagination.href.previous %}<a href="/Project1{{ pagination.href.previous }}">Previous Photo</a>{% else %}{% endif %}</ul>
+            <ul>{% if pagination.href.next %}<a href="/Project1{{ pagination.href.next }}">Next Photo</a>{% else %}{% endif %}</ul>
+            <ul>{% if page.url != pagination.href.last %}<a href="/Project1{{ pagination.href.last }}">Last Photo</a>{% else %}{% endif %}</ul>
         </nav>
     </header>
 

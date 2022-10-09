@@ -2,32 +2,29 @@
 layout: base
 title: Home
 ---
-<!DOCTYPE html>
-<html lang="en-US">
-
-<header>
-    <h1>{{ title }}</h1>
-    <nav>
-        <a href="/Project1/about/index.html">About</a>
-        <a href="/Project1/photos/index.html">Individual Photos</a>
-    </nav>
-</header>
-<main>
-    <h1>Photos Collection</h1>
-    <h2>A Collection Of The Art Of Music</h2>
-    <ul>
-    {%- for photo in photos.0apgfsq.media %}
-        <a href="{{photo.url}}">
-            <img src={{photo.src.tiny}} alt={{photo.alt}}>
-        </a>
-    {% endfor -%}
-    </ul>
-</main>
-<footer>
-    <hr>
-    <p>
-        <small>
-            <a href="https://www.pexels.com">Photos provided by Pexels</a>
-        </small>
-    </p>
-</footer>
+    <header>
+        <h1>{{ title }}</h1>
+        <nav>
+            <a href="/Project1/about/index.html">About</a>
+            <a href="/Project1/photos/index.html">Individual Photos</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Photos Collection</h1>
+        <h2>A Collection Of The Art Of Music</h2>
+        <ul>
+        {%- for photo in photos.0apgfsq.media %}
+            <a href="{{photo.url}}">
+                <img src={{photo.src.tiny}} alt={{photo.alt}}>
+            </a>
+        {% endfor -%}
+        </ul>
+    </main>
+    <footer>
+        <hr>
+        <p>
+            <small>
+                <a href="https://www.pexels.com">Photos provided by Pexels</a>
+            </small>
+        </p>
+    </footer>

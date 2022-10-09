@@ -7,10 +7,7 @@ pagination:
     alias: photo
     permalink: "photos/test/{{photos.0apgfsq.media.id}}"
 ---
-<!DOCTYPE html>
-<html lang="en-US">
 
-<body style="background-color: {{photo.avg_color}}">
     <header>
         <h1>{{ title }}</h1>
         <nav>
@@ -23,7 +20,7 @@ pagination:
         </nav>
     </header>
 
-    <main>
+    <main style="background-color: {{photo.avg_color}}">
         <a href="{{photo.url}}">
             <img src={{photo.src.large}} alt={{photo.alt}}>
         </a>
@@ -47,4 +44,3 @@ pagination:
             </small>
         </p>
     </footer>
-</body>
